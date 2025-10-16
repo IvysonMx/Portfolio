@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanelisiwe Fihlani - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Sanelisiwe Fihlani</div>
+        <nav class="main-nav">
+            <a href="#hero">Home</a>
+            <a href="#work">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Shaping Tomorrow through Code and Innovation</h1>
+            <p>Hello! I'm Sanelisiwe, a Software Developer in training focused on applying theoretical understanding to real-world problem-solving and technology-driven innovation. My approach combines theoretical understanding with hands-on practice, focusing on **clean architecture and efficient problem-solving**.</p>
+            <a href="#work" class="button primary-button">View My Work</a>
+            <a href="#about" class="button primary-button">More about me</a>
+        </div>
+        <div class="hero-image">
+            <img src="profile.jpg" alt="A professional portrait of Sanelisiwe Fihlani">
+        </div>
+    </section>
+
+    <section class="skills-overview-section">
+        <h2>Core Skills Overview</h2>
+        <div class="skills-list">
+             <ul>
+                <li>**Languages:** JavaScript (ES6+), Python, SQL</li>
+                <li>**Frameworks:** React, Node.js, Express</li>
+                <li>**Databases:** PostgreSQL, MongoDB</li>
+                <li>**DevOps:** Docker, Git/GitHub, CI/CD Basics</li>
+                <li>**Practices:** Object-Oriented Programming, TDD/Testing</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="work" class="work-section">
+        <h2>Selected Projects</h2>
+        <p>A gallery of projects from my studies, showcasing my skills in web development and software engineering. **This section uses an HTML table format as required by the assignment brief.**</p>
+
+        <div class="project-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Title</th>
+                        <th>Short Description</th>
+                        <th>Programmes Used / Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NGO Community Services</td>
+                        <td>Decoupled a monolithic application into specialized microservices to improve scalability and designed a robust, event-driven API layer.</td>
+                        <td>HTML, CSS, JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>Real-time Data Visualization Dashboard</td>
+                        <td>Created a low-latency dashboard using WebSockets and D3.js to monitor system health and display live data streams, ensuring immediate, actionable insights.</td>
+                        <td>React, D3.js, WebSockets, TypeScript</td>
+                    </tr>
+                    <tr>
+                        <td>Automated CI/CD Deployment Tool</td>
+                        <td>Developed a fully automated CI/CD pipeline using Terraform for IaC and GitHub Actions for deployment to a Kubernetes cluster, aiming to reduce manual deployment time.</td>
+                        <td>Python, Docker, GitHub Actions, Terraform</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Me & My Goals</h2>
+        <div class="about-content">
+            <div class="bio">
+                <p>Hello! I'm Sanelisiwe, a Software Developer passionate about building robust, scalable applications. My approach combines theoretical understanding with hands-on practice, focusing on **clean architecture and efficient problem-solving**. I thrive on transforming complex technical requirements into functional, high-quality software.</p>
+                <p>My goal as an IT professional is to specialize in **DevOps and cloud-native architecture**, contributing to teams that build and maintain high-availability systems. I am dedicated to continuous learning, particularly in areas like advanced container orchestration (Kubernetes) and serverless computing. I aim to apply my theoretical knowledge to solve real-world industry problems and drive technology-driven innovation.</p>
+                <p>I believe that well-structured, maintainable code is the foundation of excellent software, and I strive to uphold best practices in all my projects, from initial design to final deployment.</p>
+
+                <a href="https://ivysonmx.github.io/Resume/CV_Sanelisiwe.pdf" 
+        target="_blank" 
+        class="button secondary-button">
+            Preview Resume (PDF)
+        </a>
+            </div>
+            <div class="skills-list">
+                <h3>Core Skills</h3>
+                <ul>
+                    <li>**Languages:** JavaScript (ES6+), Python, SQL</li>
+                    <li>**Frameworks:** React, Node.js, Express</li>
+                    <li>**Databases:** PostgreSQL, MongoDB</li>
+                    <li>**DevOps:** Docker, Git/GitHub, CI/CD Basics</li>
+                    <li>**Practices:** Object-Oriented Programming, TDD/Testing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Let's Collaborate.</h2>
+        <p>I am currently open to new full-time roles and freelance projects. Get in touch!</p>
+        
+        <form class="contact-form" action="mailto:fihlanis27@gmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="button primary-button">Send Message</button>
+        </form>
+
+        <p><br>You can also find me across the web. Click an icon to connect!</p>
+        
+        <div class="social-icons-contact">
+            <a href="https://www.linkedin.com/in/sanelisiwe-fihlani" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="YOUR_TWITTER_URL" target="_blank" aria-label="Twitter">
+                <i class="fab fa-x-twitter fa-2x"></i>
+            </a>
+            <a href="YOUR_GITHUB_URL" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/ivysonmx" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </div>
+    </section>
+
+    <a href="#hero" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <footer>
+        <p class="footer-name">&copy; 2025 Sanelisiwe Fihlani. Portfolio.</p>
+        
+        <nav class="footer-nav">
+            <a href="#hero">Home</a>
+            <a href="#work">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
