@@ -1,4 +1,15 @@
-/* --- Global Styles & Setup --- */
+/* ==========================================================
+   File: Portfolio Stylesheet
+   Author: Sanelisiwe Fihlani
+   Description: Core styles for the single-page portfolio, 
+                including responsive design and theme variables.
+   Version: 1.0
+   Date: 2025-10-15
+   ========================================================== */
+
+/* ==========================================================
+   Base & Global Styles
+   ========================================================== */
 :root {
     --primary-color: #007bff; /* Blue */
     --secondary-color: #1a1a1a; /* Dark Text */
@@ -8,7 +19,7 @@
     --transition-speed: 0.3s;
 }
 
-/* KEY CSS ADDITION FOR SMOOTH SCROLLING (Essential for single page nav) */
+/* Enable smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth; 
 }
@@ -41,7 +52,64 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* --- Utility Classes --- */
+/* ==========================================================
+   Navigation & Header
+   ========================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--background-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Desktop Navigation Links */
+.main-nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    padding: 5px 0; 
+    transition: border-bottom var(--transition-speed);
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Active link style (Scroll Spy) */
+.main-nav a.active {
+    color: var(--primary-color);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 3px;
+}
+
+/* Menu Toggle Button (Hidden on desktop) */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    padding: 5px;
+    transition: transform var(--transition-speed);
+    z-index: 101; 
+}
+
+/* ==========================================================
+   Utility & Buttons
+   ========================================================== */
 .button {
     display: inline-block;
     padding: 12px 25px;
@@ -74,6 +142,9 @@ h1, h2, h3 {
     transform: translateY(-2px);
 }
 
+/* ==========================================================
+   Section Layouts
+   ========================================================== */
 section {
     padding: 80px 5%;
     max-width: 1200px;
@@ -82,36 +153,7 @@ section {
     scroll-padding-top: 80px; 
 }
 
-/* --- Header & Navigation --- */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: var(--background-white);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.main-nav a {
-    margin-left: 20px;
-    font-weight: 500;
-    color: var(--secondary-color);
-}
-
-.main-nav a:hover {
-    color: var(--primary-color);
-}
-
-/* --- Hero Section --- */
+/* === Hero === */
 .hero-section {
     display: flex;
     align-items: center; 
@@ -120,6 +162,10 @@ section {
     padding-top: 100px;
     padding-bottom: 100px;
     min-height: 70vh;
+}
+
+.hero-content {
+    flex: 1;
 }
 
 .hero-image {
@@ -143,7 +189,7 @@ section {
     display: block;
 }
 
-/* --- Skills Overview Section (General point-form list) --- */
+/* === Skills Overview === */
 .skills-overview-section {
     text-align: center;
     background-color: var(--background-white);
@@ -175,7 +221,7 @@ section {
     font-weight: 500;
 }
 
-/* --- Portfolio Section (TABLE STYLES) --- */
+/* === Portfolio / Work Table === */
 .work-section {
     background-color: var(--background-light);
     text-align: center;
@@ -183,7 +229,8 @@ section {
 
 .project-table-container {
     margin-top: 40px;
-    overflow-x: auto; /* Makes the table scrollable on small screens */
+    /* Allows horizontal scrolling on small screens */
+    overflow-x: auto; 
 }
 
 .project-table-container table {
@@ -193,7 +240,7 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     border-radius: 8px;
     overflow: hidden; 
-    min-width: 600px; /* Ensures a minimum readable width */
+    min-width: 800px; 
 }
 
 .project-table-container th, .project-table-container td {
@@ -219,8 +266,28 @@ section {
     background-color: #f0f0f0;
 }
 
+/* Project Screenshot column styling */
+.project-screenshot {
+    width: 200px; 
+    padding: 5px;
+}
 
-/* --- About Section --- */
+.project-screenshot img {
+    width: 100%; 
+    height: auto;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
+    cursor: pointer; 
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.project-screenshot img:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
+}
+
+/* === About Section === */
 .about-section {
     background-color: var(--background-white);
 }
@@ -264,7 +331,7 @@ section {
     border-bottom: 1px dotted #eee;
 }
 
-/* --- Contact Section --- */
+/* === Contact Section === */
 .contact-section {
     text-align: center;
     background-color: var(--background-light);
@@ -318,7 +385,9 @@ section {
     font-size: 1.9rem; 
 }
 
-/* --- Footer --- */
+/* ==========================================================
+   Footer & Back to Top
+   ========================================================== */
 footer {
     display: flex; 
     justify-content: space-between; 
@@ -343,7 +412,6 @@ footer {
     color: var(--primary-color);
 }
 
-/* --- Back to Top Button --- */
 .back-to-top {
     position: fixed; 
     bottom: 40px;
@@ -369,9 +437,79 @@ footer {
 }
 
 
-/* --- Responsive Design (Mobile) --- */
+/* ==========================================================
+   Image Modal
+   ========================================================== */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+    padding-top: 60px;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; 
+    max-width: 1000px;
+    height: auto;
+    object-fit: contain; 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Zoom Animation */
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Responsive Design (MAX-WIDTH: 768px)
+   ========================================================== */
 @media (max-width: 768px) {
     
+    section {
+        padding: 50px 5%;
+    }
+
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -395,11 +533,63 @@ footer {
         flex-direction: column;
     }
 
+    /* Show hamburger icon on small screens */
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Mobile Navigation Drawer */
+    .main-nav {
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        width: 60%; 
+        min-width: 250px;
+        height: auto;
+        padding: 10px 0;
+        
+        background-color: var(--background-white);
+        box-shadow: -4px 4px 8px rgba(0,0,0,0.1);
+        flex-direction: column;
+        text-align: center;
+        
+        /* Initial state: off-screen to the right */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        
+        z-index: 99;
+        /* Using display: none when closed prevents background interaction issues */
+        display: none; 
+    }
+
+    /* State when the menu is open (toggled by JS) */
+    .main-nav.open {
+        transform: translateX(0); 
+        display: flex;
+    }
+
     .main-nav a {
-        margin-left: 10px;
-        font-size: 0.9rem;
+        margin: 0;
+        padding: 15px 10px;
+        border-bottom: 1px solid #eee; 
+        display: block; 
+        width: 100%;
+        text-align: left; 
     }
     
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Mobile Active link style */
+    .main-nav a.active {
+        background-color: var(--background-light);
+        color: var(--primary-color);
+        font-weight: 700;
+        border-left: 5px solid var(--primary-color); 
+        border-bottom: 1px solid var(--background-light); 
+    }
+
     /* Footer Stacked on Mobile */
     footer {
         flex-direction: column;
@@ -409,5 +599,14 @@ footer {
 
     .footer-nav a {
         margin: 0 8px;
+    }
+
+    /* Adjust modal for small screens */
+    .modal-content {
+        width: 90%; 
+    }
+    
+    #caption {
+        width: 90%;
     }
 }

@@ -12,18 +12,23 @@
 
     <header class="main-header">
         <div class="logo">Sanelisiwe Fihlani</div>
-        <nav class="main-nav">
-            <a href="#hero">Home</a>
-            <a href="#work">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-nav" id="mainNav">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#work" class="nav-link">Portfolio</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <section id="hero" class="hero-section">
         <div class="hero-content">
             <h1>Shaping Tomorrow through Code and Innovation</h1>
-            <p>Hello! I'm Sanelisiwe, a Software Developer in training focused on applying theoretical understanding to real-world problem-solving and technology-driven innovation. My approach combines theoretical understanding with hands-on practice, focusing on **clean architecture and efficient problem-solving**.</p>
+            <p>Hello! I'm Sanelisiwe, a Software Developer in training focused on applying theoretical understanding to real-world problem-solving and technology-driven innovation. My approach combines theoretical understanding with hands-on practice, focusing on clean architecture and efficient problem-solving.</p>
             <a href="#work" class="button primary-button">View My Work</a>
             <a href="#about" class="button primary-button">More about me</a>
         </div>
@@ -35,12 +40,12 @@
     <section class="skills-overview-section">
         <h2>Core Skills Overview</h2>
         <div class="skills-list">
-             <ul>
-                <li>**Languages:** JavaScript (ES6+), Python, SQL</li>
-                <li>**Frameworks:** React, Node.js, Express</li>
-                <li>**Databases:** PostgreSQL, MongoDB</li>
-                <li>**DevOps:** Docker, Git/GitHub, CI/CD Basics</li>
-                <li>**Practices:** Object-Oriented Programming, TDD/Testing</li>
+            <ul>
+                <li><b>Languages:</b> HTML, CSS, JavaScript (ES6+), Java, Python, SQL</li>
+                <li><b>Frameworks:</b> React, Node.js, Express</li>
+                <li><b>Databases:</b> PostgreSQL, MongoDB</li>
+                <li><b>DevOps:</b> Docker, Git/GitHub, CI/CD Basics</li>
+                <li><b>Practices:</b> Object-Oriented Programming, TDD/Testing</li>
             </ul>
         </div>
     </section>
@@ -53,6 +58,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>Project Image <br>(Click to View)</th>
                         <th>Project Title</th>
                         <th>Short Description</th>
                         <th>Programmes Used / Technologies</th>
@@ -60,19 +66,34 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="project-screenshot">
+                            <img src="NGO.png" 
+                                 alt="Screenshot of NGO Community Services project"
+                                 onclick="app.openModal(this.src, this.alt)">
+                        </td>
                         <td>NGO Community Services</td>
                         <td>Decoupled a monolithic application into specialized microservices to improve scalability and designed a robust, event-driven API layer.</td>
-                        <td>HTML, CSS, JavaScript</td>
+                        <td>HTML, CSS, JavaScript, JSON, GitHub, IDE(VS Code, JetBrains IDEs) </td>
                     </tr>
                     <tr>
-                        <td>Real-time Data Visualization Dashboard</td>
-                        <td>Created a low-latency dashboard using WebSockets and D3.js to monitor system health and display live data streams, ensuring immediate, actionable insights.</td>
-                        <td>React, D3.js, WebSockets, TypeScript</td>
+                        <td class="project-screenshot">
+                            <img src="studybuddy.png" 
+                                 alt="Screenshot of the Smart Study Buddy Application project"
+                                 onclick="app.openModal(this.src, this.alt)">
+                        </td>
+                        <td>Smart Study Buddy Application</td>
+                        <td>Developed an application structure using Microsoft Office tools for planning and documentation. Used MS Word for specifications, Excel for tracking and data organization, and Powerpoint for presentation and mockups</td>
+                        <td>MS Word, Excel, Powerpoint</td>
                     </tr>
                     <tr>
-                        <td>Automated CI/CD Deployment Tool</td>
-                        <td>Developed a fully automated CI/CD pipeline using Terraform for IaC and GitHub Actions for deployment to a Kubernetes cluster, aiming to reduce manual deployment time.</td>
-                        <td>Python, Docker, GitHub Actions, Terraform</td>
+                        <td class="project-screenshot">
+                            <img src="virtualrealm.png" 
+                                 alt="Screenshot of Virtual Realm Technologies project"
+                                 onclick="app.openModal(this.src, this.alt)">
+                        </td>
+                        <td>Virtual Realm Technologies</td>
+                        <td>Comprehensive brand identity project, including corporate brand guidelines (MS Word), marketing materials (Canva/PowerPoint), and a video advert storyboard. Focus was on cohesive, professional communication.</td>
+                        <td>MS Word, Canva, Powerpoint</td>
                     </tr>
                 </tbody>
             </table>
@@ -83,8 +104,8 @@
         <h2>About Me & My Goals</h2>
         <div class="about-content">
             <div class="bio">
-                <p>Hello! I'm Sanelisiwe, a Software Developer passionate about building robust, scalable applications. My approach combines theoretical understanding with hands-on practice, focusing on **clean architecture and efficient problem-solving**. I thrive on transforming complex technical requirements into functional, high-quality software.</p>
-                <p>My goal as an IT professional is to specialize in **DevOps and cloud-native architecture**, contributing to teams that build and maintain high-availability systems. I am dedicated to continuous learning, particularly in areas like advanced container orchestration (Kubernetes) and serverless computing. I aim to apply my theoretical knowledge to solve real-world industry problems and drive technology-driven innovation.</p>
+                <p>Hello! I'm Sanelisiwe, a Software Developer passionate about building robust, scalable applications. My approach combines theoretical understanding with hands-on practice, focusing on clean architecture and efficient problem-solving. I thrive on transforming complex technical requirements into functional, high-quality software.</p>
+                <p>My goal as an IT professional is to specialize in DevOps and cloud-native architecture, contributing to teams that build and maintain high-availability systems. I am dedicated to continuous learning, particularly in areas like advanced container orchestration (Kubernetes) and serverless computing. I aim to apply my theoretical knowledge to solve real-world industry problems and drive technology-driven innovation.</p>
                 <p>I believe that well-structured, maintainable code is the foundation of excellent software, and I strive to uphold best practices in all my projects, from initial design to final deployment.</p>
 
                 <a href="https://ivysonmx.github.io/Resume/CV_Sanelisiwe.pdf" 
@@ -96,11 +117,11 @@
             <div class="skills-list">
                 <h3>Core Skills</h3>
                 <ul>
-                    <li>**Languages:** JavaScript (ES6+), Python, SQL</li>
-                    <li>**Frameworks:** React, Node.js, Express</li>
-                    <li>**Databases:** PostgreSQL, MongoDB</li>
-                    <li>**DevOps:** Docker, Git/GitHub, CI/CD Basics</li>
-                    <li>**Practices:** Object-Oriented Programming, TDD/Testing</li>
+                    <li><b>Languages:</b> HTML, CSS, JavaScript (ES6+), Java, Python, SQL</li>
+                    <li><b>Frameworks:</b> React, Node.js, Express</li>
+                    <li><b>Databases:</b> PostgreSQL, MongoDB</li>
+                    <li><b>DevOps:</b> Docker, Git/GitHub, CI/CD Basics</li>
+                    <li><b>Practices:</b> Object-Oriented Programming, TDD/Testing</li>
                 </ul>
             </div>
         </div>
@@ -110,10 +131,10 @@
         <h2>Let's Collaborate.</h2>
         <p>I am currently open to new full-time roles and freelance projects. Get in touch!</p>
         
-        <form class="contact-form" action="mailto:fihlanis27@gmail.com" method="post" enctype="text/plain">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+        <form class="contact-form" action="https://formspree.io/f/xdkwvkdw" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit" class="button primary-button">Send Message</button>
         </form>
 
@@ -140,7 +161,7 @@
     </a>
     
     <footer>
-        <p class="footer-name">&copy; 2025 Sanelisiwe Fihlani. Portfolio.</p>
+        <p>&copy; <span id="year"></span> Sanelisiwe Fihlani • Portfolio</p>
         
         <nav class="footer-nav">
             <a href="#hero">Home</a>
@@ -149,6 +170,157 @@
             <a href="#contact">Contact</a>
         </nav>
     </footer>
+
+    <div id="imageModal" class="modal" onclick="app.closeModal()">
+        <span class="close" onclick="app.closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        /**
+         * PortfolioApp Class
+         * Handles all dynamic functionality for the single-page portfolio,
+         * including the hamburger menu, scroll spy navigation, and image modal.
+         */
+        class PortfolioApp {
+            constructor() {
+                // DOM Elements
+                this.sections = document.querySelectorAll('section');
+                this.navLinks = document.querySelectorAll('.main-nav .nav-link');
+                this.menuToggle = document.getElementById('menuToggle');
+                this.mainNav = document.getElementById('mainNav');
+                this.toggleIcon = this.menuToggle.querySelector('i');
+                this.modal = document.getElementById("imageModal");
+                this.modalImg = document.getElementById("modalImage");
+                this.captionText = document.getElementById("caption");
+            }
+
+            // --- Initialization ---
+            init() {
+                this.setYear();
+                this.setupListeners();
+                this.setupScrollSpy();
+            }
+
+            // Sets the current year in the footer
+            setYear() {
+                document.getElementById('year').textContent = new Date().getFullYear();
+            }
+
+            // Sets up all event listeners
+            setupListeners() {
+                // Toggle mobile menu on button click
+                this.menuToggle.addEventListener('click', () => this.toggleMenu());
+                
+                // Close menu when a link is clicked (mobile UX)
+                this.mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768) {
+                            this.toggleMenu(false);
+                        }
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (event) => {
+                    const isClickInsideNav = this.mainNav.contains(event.target) || this.menuToggle.contains(event.target);
+                    
+                    if (this.mainNav.classList.contains('open') && !isClickInsideNav) {
+                        this.toggleMenu(false);
+                    }
+                });
+
+                // Close modal on ESC key press
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeModal();
+                    }
+                });
+            }
+
+            // --- Hamburger Menu Logic ---
+            /**
+             * Toggles the mobile navigation menu open or closed.
+             * @param {boolean} [isOpen] - Optional explicit state (true=open, false=closed).
+             */
+            toggleMenu(isOpen) {
+                const shouldOpen = isOpen !== undefined ? isOpen : !this.mainNav.classList.contains('open');
+
+                if (shouldOpen) {
+                    this.mainNav.classList.add('open');
+                    this.toggleIcon.classList.remove('fa-bars');
+                    this.toggleIcon.classList.add('fa-times');
+                } else {
+                    this.mainNav.classList.remove('open');
+                    this.toggleIcon.classList.remove('fa-times');
+                    this.toggleIcon.classList.add('fa-bars');
+                }
+            }
+
+            // --- Scroll Spy Logic ---
+            setupScrollSpy() {
+                const options = {
+                    root: null,
+                    // Offset for sticky header: 80px (header height) - 5px buffer
+                    rootMargin: '-75px 0px -50% 0px', 
+                    threshold: 0.1 
+                };
+
+                const observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
+
+                this.sections.forEach(section => {
+                    if (section.id) { 
+                        observer.observe(section);
+                    }
+                });
+            }
+
+            // Callback function for the IntersectionObserver
+            handleIntersection(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentSectionId = entry.target.id;
+                        
+                        // Remove 'active' class from all links
+                        this.navLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // Add 'active' class to the corresponding link
+                        const targetLink = document.querySelector(`.main-nav a[href="#${currentSectionId}"]`);
+                        if (targetLink) {
+                            targetLink.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            // --- Image Modal Logic (Public Method for inline HTML click) ---
+            /**
+             * Opens the image modal with the provided source and description.
+             * This method is called directly from the onclick attribute in the HTML table.
+             * @param {string} imageSrc - The source URL of the image.
+             * @param {string} imageAlt - The alt text to use as the caption.
+             */
+            openModal(imageSrc, imageAlt) {
+                this.modal.style.display = "block";
+                this.modalImg.src = imageSrc;
+                this.captionText.innerHTML = imageAlt;
+                document.body.style.overflow = "hidden"; // Prevent background scrolling
+            }
+
+            /**
+             * Closes the image modal.
+             */
+            closeModal() {
+                this.modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Restore scrolling
+            }
+        }
+
+        // Initialize the application when the DOM is ready
+        const app = new PortfolioApp();
+        document.addEventListener('DOMContentLoaded', () => app.init());
+    </script>
 
 </body>
 </html>
